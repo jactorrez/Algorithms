@@ -1,3 +1,5 @@
+package InsertionSort;
+
 import java.util.Arrays;
 
 public class InsertionSort{
@@ -39,3 +41,4 @@ public class InsertionSort{
 		
 	}
 }
+
