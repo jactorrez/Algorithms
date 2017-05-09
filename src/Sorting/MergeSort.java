@@ -1,88 +1,82 @@
 package Sorting;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class MergeSort{
 	
-	private int[] array;
-	private int length;
-	
-	public MergeSort(int[] array){
-		this.array = array;
-		this.length = array.length;
+	public static void sort(int[] array){
+		// Start sort
+		mergeSort(array);
 	}
 	
-	public void sort(){
-		divide(array);
-	}
-	
-	private void divide(int[] arr){
+	private static void mergeSort(int[] arr){
 		
-		if(arr.length <= 1)
+		// Cache  array length
+		int arrLength = arr.length;
+		
+		// Check if length of array is less than or equal to 1
+		// If so, return because it is already sorter/unable to split
+		if(arrLength <= 1)
 			return; 
 		
-		int arrMid = arr.length/2;
+		// Calculate center of array to create two new, equal-sized arrays
+		int arrMid = arrLength/2;
 		
-		// create left-most array, then populate 
-		int[] left = new int[arrMid];
-		for(int i = 0; i < arrMid; i++){
-			left[i] = arr[i];
-		}
+		// Create new array to represent left-half of previous array 
+		int[] leftArray = new int[arrMid];
 		
-		// create right-most array, then populate
-		int[] right = new int[arr.length - arrMid];
-		
-		for(int z = arrMid; z < arr.length; z++){
-			right[z - arrMid] = arr[z];
-		}
+		// Fill new left-half array with content from previous "full" array 
+		System.arraycopy(arr, 0, leftArray, 0, arrMid);
 
-		divide(left);
-		divide(right);
-		merge(left, right, arr);
+		// Create right-half of previous array
+		int[] rightArray = new int[arrLength - arrMid];
 		
+		// Fill new right-half array with content from previous "full" array
+		System.arraycopy(arr, leftArray.length, rightArray, 0, rightArray.length);
+
+		mergeSort(leftArray);
+		mergeSort(rightArray);
+		mergeHalves(leftArray, rightArray, arr);
 	}
 	
-	private void merge(int[] arr1, int[] arr2, int[] targetArr){
+	private static void mergeHalves(int[] leftArray, int[] rightArray, int[] destArray){
 		
-		int left_i = 0;
-		int right_i = 0;
+		// Both arrays are "new" arrays, so index starts at 0
+		int indexLeft = 0;
+		int indexRight = 0;
 		
-		int k = 0;
+		// Index of open space in destination array where sorted elements are placed
+		int indexDest = 0;
 		
-		int arr1_length = arr1.length;
-		int arr2_length = arr2.length;
+		// Caching length of left and right array, respectively
+		int leftLength = leftArray.length;
+		int rightLength = rightArray.length;
 		
-		while(left_i < arr1_length && right_i < arr2_length){
-			if(arr1[left_i] < arr2[right_i]){
-				targetArr[k] = arr1[left_i];
-				
-				left_i++;
+		while(indexLeft < leftLength && indexRight < rightLength){
+			if(leftArray[indexLeft] < rightArray[indexRight]){
+				destArray[indexDest++] = leftArray[indexLeft++];
 			} else{
-				targetArr[k] = arr2[right_i];
-				right_i++;
+				destArray[indexDest++] = rightArray[indexRight++];
 			}
-			k++;
 		}
+
+		// Copy remaining elements from both halves if remaining elements exist in either
+		System.arraycopy(leftArray, indexLeft, destArray, indexDest, leftLength - indexLeft);
+		System.arraycopy(rightArray, indexRight, destArray, indexDest, rightLength - indexRight);
 		
-		while(left_i < arr1_length){
-			targetArr[k] = arr1[left_i];
-			left_i++;
-			k++;
-		}
-		
-		while(right_i < arr2_length){			
-			targetArr[k] = arr2[right_i];
-			right_i++;
-			k++;
-		}
 	}
 	
 	public static void main(String[] args){
-		int[] testArr = {1, 6, 2, 3, 4, 5, 8, 9, 3, 5, 10};
+		// Unsorted array
+		int[] testArr = {1, 6, 2, 10, 20, 80, 3};
+		
+		// Output unsorted array 
 		System.out.println("Before: " + Arrays.toString(testArr));
-		MergeSort test = new MergeSort(testArr);
-		test.sort();
+		
+		// Call merge sort
+		MergeSort.sort(testArr);
+		
+		// Output sorted array 
 		System.out.println("After: " + Arrays.toString(testArr));
 	}
 
