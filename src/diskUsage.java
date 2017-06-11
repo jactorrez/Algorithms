@@ -8,8 +8,7 @@ public class diskUsage {
 				File child = new File(root, childName); // compose full path to child
 				total += diskUsage(child);				// add child's usage to total
 			}
-		}
-		
+		}	
 		System.out.println(total + "\t" + root);	// descriptive output
 		return total;								// return the grand total
 	}

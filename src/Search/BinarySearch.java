@@ -7,11 +7,8 @@ public class BinarySearch {
 		this.data = arr;
 	}
 	
-	
 	public boolean search(int target){
-		int low = 0;
-		int high = data.length - 1;
-		return binarySearch(target, low, high);
+		return binarySearch(target, 0, data.length - 1);
 	}
 	
 	/* Returns true if the target value is found in the indicated portion of the array
