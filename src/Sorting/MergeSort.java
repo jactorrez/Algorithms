@@ -11,11 +11,11 @@ public class MergeSort{
 	
 	private static void mergeSort(int[] arr){
 		
-		// Cache  array length
+		// Cache array length
 		int arrLength = arr.length;
 		
 		// Check if length of array is less than or equal to 1
-		// If so, return because it is already sorter/unable to split
+		// If so, return because it is already sorted/unable to split
 		if(arrLength <= 1)
 			return; 
 		
