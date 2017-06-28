@@ -5,7 +5,7 @@ import Queue.*;
 
 public class queueQuickSort extends AbstractSort{
 	
-	public static <K> void quickSort(Queue<K> S, Comparator<K> comp){
+	public static <K> void sort(Queue<K> S, Comparator<K> comp){
 		int n = S.size();
 		if (n < 2){							// queue is trivially sorted
 			return;								
