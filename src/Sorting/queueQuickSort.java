@@ -31,8 +31,8 @@ public class queueQuickSort extends AbstractSort{
 		}
 		
 		// conquer
-		quickSort(L, comp);				  // sort elements less than pivot
-		quickSort(G, comp);				  // sort elements greater than pivot
+		sort(L, comp);				  // sort elements less than pivot
+		sort(G, comp);				  // sort elements greater than pivot
 		
 		// concatenate results
 		while(!L.isEmpty()){

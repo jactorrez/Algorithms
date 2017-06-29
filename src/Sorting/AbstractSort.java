@@ -1,5 +1,7 @@
 package Sorting;
 
+import java.util.ArrayList;
+
 public abstract class AbstractSort {
 	public static void sort(Comparable[] a){}
 	
@@ -16,6 +18,14 @@ public abstract class AbstractSort {
 	public static void show(Comparable[] a){
 		for (int i = 0; i < a.length; i++){
 			System.out.print(a[i] + " ");
+		}
+		
+		System.out.println();
+	}
+	
+	public static void showArrayList(ArrayList a){
+		for(int i = 0; i < a.size(); i++){
+			System.out.println(a.get(i) + " ");
 		}
 		
 		System.out.println();

@@ -6,7 +6,7 @@ public class quickSortInPlace {
 	
 	public <K> void sortInPlace(K[] S, Comparator<K> comp, int a, int b){
 		
-		if(a >= b){
+		if(a >= b){ 	
 			return;					// subarray is trivially sorted
 		}
 		

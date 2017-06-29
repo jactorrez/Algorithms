@@ -4,5 +4,7 @@
 	<classpathentry excluding="src/" kind="src" path=""/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Data Structures"/>
+	<classpathentry kind="lib" path="/Data Structures/src/PriorityQueue" sourcepath="/Data Structures/src/PriorityQueue"/>
+	<classpathentry kind="lib" path="/Data Structures/src/Queue" sourcepath="/Data Structures/src/Queue"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
