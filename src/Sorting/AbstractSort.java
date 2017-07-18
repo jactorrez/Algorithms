@@ -3,7 +3,7 @@ package Sorting;
 import java.util.ArrayList;
 
 public abstract class AbstractSort {
-	public static void sort(Comparable[] a){}
+	public static <E> void sort(Comparable<E>[] a){}
 	
 	public static boolean less(Comparable v, Comparable w){
 		return v.compareTo(w) < 0;

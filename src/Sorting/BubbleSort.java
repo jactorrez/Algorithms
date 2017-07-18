@@ -1,6 +1,7 @@
 package Sorting;
 
 public class BubbleSort extends AbstractSort{
+	
 	public static void sort(Comparable[] a){
 		int arrLimit = (a.length - 1); 
 		boolean sorted = false;
