@@ -41,6 +41,15 @@ public abstract class AbstractSort {
 		return true;
 	}
 	
+	public static void showArray(int[] a){
+		
+		System.out.print("[");
+		for (int i = 0; i < a.length; i++){
+			System.out.print(a[i] + ",");
+		}
+		System.out.println("]");
+	}
+	
 //	public static void main(String[] args){
 //		Integer[] a = {4,6,2,3,7,1,9};
 //		//sort(a);
