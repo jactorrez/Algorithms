@@ -45,7 +45,13 @@ public abstract class AbstractSort {
 		
 		System.out.print("[");
 		for (int i = 0; i < a.length; i++){
+			
+			if(i == a.length - 1){
+				System.out.print(a[i]);
+				
+			} else {
 			System.out.print(a[i] + ",");
+			}
 		}
 		System.out.println("]");
 	}
