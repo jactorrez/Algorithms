@@ -56,7 +56,7 @@ public class MinimumSpanningTree {
 	}
 	
 	/* A Union-Find structure for maintaining disjoints sets */
-	public class Partition<E>{
+	public static class Partition<E>{
 		
 		/* Makes a new cluster containing element e and returns its position */
 		public Position<E> makeCluster(E e){
