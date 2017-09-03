@@ -24,20 +24,6 @@ public class QuickSort {
 		sort(arr, splitIndex + 1, hi);	
 	}
 	
-	// Fisher-Yates shuffle to shuffle array
-	private static <T> void shuffle(Comparable<T>[] array){
-		int index;
-		Comparable<T> temp;
-		Random random = new Random();
-		
-		for(int i = array.length - 1; i > 0; i--){
-			index = random.nextInt(i + 1);
-			temp = array[index];
-			array[index] = array[i];
-			array[i] = temp;
-		}
-	}
-	
 	// Partitioning logic
 	private static <T> int partition(Comparable<T>[] array, int lo, int hi){
 		Comparable<T> pivot = array[lo];
@@ -71,6 +57,20 @@ public class QuickSort {
 	}
 	
 	// --- utility methods ---
+	
+	// Fisher-Yates shuffle to shuffle array
+	private static <T> void shuffle(Comparable<T>[] array){
+		int index;
+		Comparable<T> temp;
+		Random random = new Random();
+		
+		for(int i = array.length - 1; i > 0; i--){
+			index = random.nextInt(i + 1);
+			temp = array[index];
+			array[index] = array[i];
+			array[i] = temp;
+		}
+	}
 	
 	// check if value v is less than value w
 	@SuppressWarnings("unchecked")
