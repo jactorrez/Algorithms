@@ -17,7 +17,7 @@ public class quickSortInPlace {
 		
 		while(left <= right){
 			// scan until reaching value equal or larger than pivot (or right marker)
-			while(left <= right && comp.compare(S[left], pivot) < 0){
+			while((left <= right) && (comp.compare(S[left], pivot) < 0)){
 				left++;
 			}
 			
