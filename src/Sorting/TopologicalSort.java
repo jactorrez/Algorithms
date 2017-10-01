@@ -1,12 +1,12 @@
-package Sorting;
+package sorting;
 
-import Graphs.Edge;
-import Graphs.Graph;
-import Graphs.Vertex;
-import List.LinkedPositionalList;
-import List.PositionalList;
-import Map.ProbeHashMap;
-import Stack.LinkedStack;
+import structs.graphs.Edge;
+import structs.graphs.Graph;
+import structs.graphs.Vertex;
+import structs.lists.LinkedPositionalList;
+import structs.lists.PositionalList;
+import structs.maps.ProbeHashMap;
+import structs.core.stack.LinkedStack;
 
 public class TopologicalSort {
 	public static <V,E> PositionalList<Vertex<V>> topologicalSort(Graph<V,E> g){
@@ -32,7 +32,7 @@ public class TopologicalSort {
 			topo.addLast(u);
 			for(Edge<E> e : g.outgoingEdges(u)){     // consider all outgoing neighbors of u
 				Vertex<V> v = g.opposite(u, e);
-				inCount.put(v, inCount.get(v) - 1); // v has one less constraint without u
+				inCount.put(v, inCount.get(v) - 1);  // v has one less constraint without u
 				if(inCount.get(v) == 0){
 					ready.push(v);
 				}

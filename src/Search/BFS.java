@@ -1,12 +1,12 @@
-package Search;
+package search;
 
 import java.util.Set;
 
-import Graphs.Edge;
-import Graphs.Graph;
-import Graphs.Vertex;
-import List.LinkedPositionalList;
-import Map.Map;
+import structs.graphs.Edge;
+import structs.graphs.Graph;
+import structs.graphs.Vertex;
+import structs.lists.LinkedPositionalList;
+import structs.maps.Map;
 
 public class BFS {
 	

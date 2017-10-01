@@ -1,13 +1,13 @@
-import Graphs.Edge;
-import Graphs.Graph;
-import Graphs.Vertex;
-import List.LinkedPositionalList;
-import List.Position;
-import List.PositionalList;
-import Map.ProbeHashMap;
-import PriorityQueue.Entry;
-import PriorityQueue.HeapPriorityQueue;
-import PriorityQueue.PriorityQueue;
+import structs.graphs.Edge;
+import structs.graphs.Graph;
+import structs.graphs.Vertex;
+import structs.lists.LinkedPositionalList;
+import structs.lists.Position;
+import structs.lists.PositionalList;
+import structs.maps.ProbeHashMap;
+import structs.priorityqueue.Entry;
+import structs.priorityqueue.HeapPriorityQueue;
+import structs.priorityqueue.PriorityQueue;
 
 public class MinimumSpanningTree {
 	

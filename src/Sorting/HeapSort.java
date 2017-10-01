@@ -1,9 +1,9 @@
-package Sorting;
+package sorting;
 import java.util.ArrayList;
 import java.util.Random;
 
-import PriorityQueue.Entry;
-import PriorityQueue.HeapPriorityQueue;
+import structs.priorityqueue.Entry;
+import structs.priorityqueue.HeapPriorityQueue;
 
 public class HeapSort<K,V> extends AbstractSort {
 	
@@ -59,13 +59,7 @@ public class HeapSort<K,V> extends AbstractSort {
 	
 	public static void main(String[] arg){
 		ArrayList<Entry<Integer, String>> test = new ArrayList<>();
-		Random rand = new Random();
-		
-		for(int i = 0; i < 8; i++){
-			int n = rand.nextInt(20) + 1;
-			test.add(new TestEntry<Integer, String>(n, "letter"));
-		}
-
+	
 		HeapSort<Integer, String> testSort = new HeapSort<>(test);
 		System.out.println("Before: ");
 		showList(testSort.innerHeapList);

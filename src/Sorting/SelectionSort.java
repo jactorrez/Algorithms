@@ -1,4 +1,4 @@
-package Sorting;
+package sorting;
 
 public class SelectionSort extends AbstractSort
 {	// Sort a into ascending order

@@ -1,13 +1,13 @@
-package Search;
+package search;
 
 import java.util.Set;
 
-import Graphs.Edge;
-import Graphs.Graph;
-import Graphs.Vertex;
-import List.PositionalList;
-import List.LinkedPositionalList;
-import Map.Map;
+import structs.graphs.Edge;
+import structs.graphs.Graph;
+import structs.graphs.Vertex;
+import structs.lists.PositionalList;
+import structs.lists.LinkedPositionalList;
+import structs.maps.Map;
  
 public class DFS {
 	
@@ -26,7 +26,7 @@ public class DFS {
 	/* Returns an ordered list of edges comprising the directed path from u to v */
 	public <V,E> PositionalList<Edge<E>> constructPath(Graph<V,E> g, Vertex<V> u, Vertex<V> v, Map<Vertex<V>, Edge<E>> forest){
 		
-		PositionalList<Edge<E>> path = new LinkedPositionalList();
+		PositionalList<Edge<E>> path = new LinkedPositionalList<Edge<E>>();
 		
 		boolean wasDiscovered = (forest.get(v) != null);
 		

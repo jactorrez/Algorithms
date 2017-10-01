@@ -1,9 +1,9 @@
-package Sorting;
+package sorting;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import Sorting.InsertionSort;
+import sorting.InsertionSort;
 
 public class BucketSort {
 	

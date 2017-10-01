@@ -1,7 +1,7 @@
-package Search;
+package search;
 
-import Graphs.Graph;
-import Graphs.Vertex;
+import structs.graphs.Graph;
+import structs.graphs.Vertex;
 
 /** Graph must be implemented using an adjacency matrix to calculate its transitive closure **/
 

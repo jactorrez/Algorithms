@@ -1,4 +1,4 @@
-package Search;
+package search;
 
 public class BinarySearch {
 	private int[] data;
